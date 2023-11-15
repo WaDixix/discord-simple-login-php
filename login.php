@@ -3,8 +3,8 @@
 session_start();
 
 $configuration = [
-	"tokenURL" => "https://discordapp.com/api/oauth2/token",
-	"apiURLBase" => "https://discordapp.com/api/users/@me",
+	"tokenURL" => "https://discord.com/api/oauth2/token",
+	"apiURLBase" => "https://discord.com/api/users/@me",
 	"OAUTH2_CLIENT_ID" => "XXXXXXXXXXXXXXXX",
 	"OAUTH2_CLIENT_SECRET" => "XXXXXXXXXXXXXXXX",
 	"RETURN_URL" => "https://example.com/login.php",
@@ -23,7 +23,7 @@ if (isset($_GET["login"]))
 		"state" => $_SESSION["state"]
 	);
 
-	header("Location: https://discordapp.com/api/oauth2/authorize?" . http_build_query($params));
+	header("Location: https://discord.com/api/oauth2/authorize?" . http_build_query($params));
 	die();
 }
 
